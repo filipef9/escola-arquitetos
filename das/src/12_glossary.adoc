@@ -1,0 +1,53 @@
+[[section-glossary]]
+== Glossary
+
+[role="arc42help"]
+****
+[options="header",cols="3,7"]
+|===
+
+| Termo | Definição
+
+| Endpoint
+| Ponto de entrada dos serviços REST. Responsável por receber as requisições dos serviços.
+
+| REST
+| A Representational State Transfer, em português, Transferência de Estado Representacional. É uma abstração da
+arquitetura da World Wide Web, ou seja, um estilo arquitetural que consiste de um conjunto coordenado de restrições
+arquiteturais aplicadas  componentes, conectores e elementos de dados dentro de um sistema de hipermídia distribuído.
+O REST ignora os detalhes de implementação de componente e a sintaxe de protocolo com o objetivo de focar nos papéis dos
+componentes, nas restrições sobre sua interação com outros componentes e na sua interpretação de elementos de dados
+significantes.
+
+| Hibernate
+|É um framework para o mapeamento objeto-relacional escrito na linguagem Java. O objetivo do Hibernate é diminuir a
+complexidade entre os programas Java orientados a objetos e os bancos de dados ditos modelo relacional, em especial, no
+desenvolvimento de consultas e atualizações dos dados. Sua principal característica é a transformação das classes em
+Java para tabelas de dados e dos tipos de dados Java para os da SQL. O Hibernate gera as consultas SQL e libera o
+desenvolvedor do trabalho manual da conversão dos dados resultantes, mantendo o programa portável para quaisquer bancos
+de dados.
+
+| JPA
+| É o padrão definido para a linguagem Java que descreve uma interface comum para frameworks de persistência de dados.
+A JPA define uma meio de mapeamento objeto-relacional para os objetos  Java simples e comuns (POJOs), denominados de
+entidade.
+
+| WSDL
+| Web Services Description Language. É uma linguagem baseada em XML utilizada para descrever Web Services funcionando
+como um contrato do serviço. Trata-se de um documento escrito em XML que além de descrever o serviço, especifica como
+acessá-lo e quais são as operações ou métodos disponíveis.
+
+| BEAN
+| Objetos Java gerenciados pelo container do Spring. Esses beans são criados, instanciados a partir dos metadados de
+configuração fornecidos ao container, como anotações e arquivos de configurações.
+
+| Singleton
+| Padrão de projeto que define uma única instância de um objeto por usuário ou aplicação.
+
+| Kubernetes
+| É um sistema open-source de automação de implantação, escalabilidade e gereciamento de containers através de clusters
+de hosts.
+
+|===
+****
+

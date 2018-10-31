@@ -1,0 +1,76 @@
+[[section-architecture-constraints]]
+== Architecture Constraints
+
+=== Technical Constraints
+
+[role="arc42help"]
+****
+[options="header",cols="3,7"]
+|===
+|Constraints|Background and/or Motivation
+
+|Implementação
+| O frontend deve ser implementado utilizando o framework Javascript Angular. Os microserviços devem ser implementados
+utilizando as seguintes linguagens e frameworks: Java 8 de preferência; Clojure para persistência no Datomic; Python e
+Scala para Big Data, Machine Learning, Deep Learning e Analytics; Spring Boot e Spring Cloud.
+
+|Banco de Dados
+|Datomic e Amazon DynamoDB
+
+|Bibliotecas e Componentes
+|Todas as dependências externas devem estar disponibilizadas através de um package manager. Devem também, estar sob
+licença open source compatível.
+
+|Implantação
+|Os serviços devem ser implantados em containers Docker.
+|===
+****
+
+=== Organization Constraints
+
+[role="arc42help"]
+****
+[options="header",cols="3,7"]
+|===
+|Constraint| Background and/or Motivation
+
+|Configuration and version control management
+|Cada serviço deve ter seu próprio repositório. Todos os repositórios são privados e pertencem a organização. Os commits
+e a organização das branchs devem seguir o processo GitFlow.
+
+|Testing
+|Utilizar Junit, Mockito e Hamcrest para criação de testes unitários e de integração. Utilizar Cucumber para os critérios
+de aceitação, e Gatling para os testes de performance. No Frontend deve-se utilizar Jasmine e Karma.
+
+|===
+****
+
+=== Conventions
+
+[role="arc42help"]
+****
+[options="header",cols="3,7"]
+|===
+| Conventions | Background and/or Motivation
+
+| Documentação de Arquitetura
+| Baseado na estrutura do template arc42 em inglês na versão 7.0
+
+| Representação Arquitetural
+| A arquitetura será apresentada de acordo com um modelo conhecido como C4. O modelo C4 é uma abordagem que utiliza
+abstrações para a diagramação da arquitetura de software. Esse modelo provê uma maneira de comunicar eficientemente a
+arquitetura de software, em diferentes níveis de detalhes, para públicos distintos. O modelo C4 consiste em um conjunto
+hierárquico de diagramas de arquitetura de software para contexto, containers, componentes e código.
+
+| Code Conventions
+| O projeto utiliza convenções da linguagem de programação Java e são verificadas através do Checkstyle e/ou DocConfig.
+Deve-se procurar as conveções e/ou padrões das outras linguagens permitidas no projeto.
+
+| Execução das Builds
+| Todas as builds, exceto as executadas no ambiente local de desenvolvimento, devem rodar com o profile *prod*.
+
+| Idioma
+| O inglês deve ser utilizado em todo o projeto.
+
+|===
+****

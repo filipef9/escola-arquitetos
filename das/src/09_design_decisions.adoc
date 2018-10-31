@@ -1,0 +1,39 @@
+[[section-design-decisions]]
+== Design Decisions
+
+
+=== Escolha do Datomic e do Amazon DynamoDB como Banco de Dados
+
+[role="arc42help"]
+****
+.Problema
+Os serviços lidarão com massivos volumes de dados. Algumas consultas serão complexas. Há necessidade de se prover
+facilidades para Analytics. O controle transacional é muito importante. O banco de dados precisa ser escalável.
+****
+
+****
+.Alternativas  Consideradas
+
+* Utilizar banco de dados relacional convencional. O problema é que os bancos de dados relacionais são progressivamente
+lentos e difíceis de escalar quando se tem um aumento substancial na volumetria de dados.
+* Utilizar Datomic e Amazon DynamoDB.
+****
+
+****
+.Decisão
+Eu optei por utilizar Datomic e Amazon DynamoDB como banco de dados. Datomic é um banco de dados diferente dos bancos
+tradicionais.
+
+Datomic armazena os dados diretamente em múltiplos índices. Ele considera dados e índices como sendo a mesma coisa.
+
+Datomic é um banco de dados em cima de outro banco de dados. Ele não escreve diretamente no file system. Ao invés disso
+ele utiliza outro banco de dados como storage backend. Nessa cenário, o Amazon DynamoDB foi escolhido como storage
+backend porque os dois já tem uma integração bastante consolidada.
+
+Datomic não é monolítico igual aos outros bancos de dados tradicionais. Ele possui diferentes APIs para leitura e escrita.
+Datomic utiliza um "transactor" API para escrita e Datalog para leitura. Isso facilita a implementação do microservice
+pattern CQRS.
+
+Datomic é um banco de dados imutável. O conceito é parecido ao sistema de controle de versões, como o Git. Os dados
+nunca são sobrescritos ou atualizados. Você apenas marca o dado inválido e adiciona um novo dado.
+****

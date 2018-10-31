@@ -1,0 +1,23 @@
+[[section-technical-risks]]
+== Risks and Technical Debts
+
+
+[role="arc42help"]
+****
+.Risco 1
+
+Datomic é um banco de dados complementamente diferente dos bancos de dados tradicionais e desconhecido da grande maioria
+dos desenvolvedores e é relativamente novo. A curva de aprendizado é um pouco alta. Esse risco pode ser mitigado através
+de treinamentos, consultoria, workshops, disponibilização de materiais de estudos e mentoring.
+****
+
+****
+.Risco 2
+
+
+
+Em relação a Open Banking API, há um grande risco no Brasil. No momento ainda não não há regulamentação. O Banco Central
+já começou as discussões com o mercado, afim de coordenar a definição desses padrões. A programação é que até o final de
+2019 o modelo seja implementado. Em abril deste ano (2018), o Banco Central regulamentou a atuação das fintechs de
+crédito. A idéia agora é começar a implementação dos serviços que já são regulamentados.
+****

@@ -1,0 +1,30 @@
+[[section-system-scope-and-context]]
+== System Scope and Context
+
+
+[role="arc42help"]
+****
+O diagrama de contexto do sistema permite ter  uma visão geral. Os detalhes não são importantes. O foco deve ser nos
+usuários e nos sistemas de software que se conectam ou interagem diretamente ao sistema.
+****
+
+.System Context Diagram
+image::system_context_diagram.png[System Context Diagram]
+
+O contexto do negócio foi baseado e levou em consideração o modelo Open Banking, onde um determinado banco expõe os seus
+sistemas através de APIs e padrões abertos, permitindo que terceiros (outros bancos, fintechs, insuretechs, desenvolvedores
+independentes, etc) ofereçam novos serviços e experiências para o cliente final.
+
+//=== Business Context
+
+//[role="arc42help"]
+//****
+
+//****
+
+//=== Technical Context
+
+//[role="arc42help"]
+//****
+
+//****

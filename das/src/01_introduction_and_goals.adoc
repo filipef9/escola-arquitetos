@@ -1,0 +1,78 @@
+[[section-introduction-and-goals]]
+== Introduction and Goals
+
+=== Requirements Overview
+
+[role="arc42help"]
+****
+O principal propósito da evolução do sistema bancário da Fintech UhuBank é poder ofertar novos serviços bancários, além
+do cartão de crédito pré-pago já oferecido, integrando-se há um banco de grande porte, através de uma Open Banking API.
+
+Os novos serviços que serão oferecidos são:
+
+ * Conta Corrente Digital
+ * Cartão de Crédito
+ * Empréstimo
+
+Todos os serviços devem ser digitais, contactless, ou seja, o cliente tem a opção de realizar 100% das interações via
+canais digitais.
+****
+
+=== Quality Goals
+
+[role="arc42help"]
+****
+[options="header",cols="1,2,7"]
+|===
+|Nr.|Quality|Motivation
+
+|1
+|Availability
+|Verificar legislação, se não houver, manter arbitrariamente a disponibilidade em 99,99%. Deve-se minimizar o máximo
+possível de downtime.
+
+|2
+|Interoperability
+|A aplicação deve prover uma API para uso das lojas virtuais com o objetivo de verificar crédito e processar o pagamento
+de uma determinada venda. Deve-se também criar uma camada cliente para comunicação com a Open Banking API.
+
+|3
+|Time Behaviour
+|Processos como os de conta corrente digital, extrato e contações de moeda devem acontecer em tempo real.
+
+|4
+|Testability
+|A arquitetura deve permitir a facilidade nos testes dos principais blocos de  construção.
+
+|5
+|Non-repudiation
+|Quaisquer operações e/ou eventos devem ser registrados para fins de auditoria para que os mesmos não possam ser
+repudiados posteriormente.
+
+|6
+|Fault Tolerance
+|O sistema deve ser resiliente e escalável horizontalmente e verticalmente afim de manter a qualidade de acesso aos
+serviços.
+|===
+****
+
+=== Stakeholders
+
+[role="arc42help"]
+****
+[options="header",cols="3,7"]
+|===
+|Role/Name|Goal/Boundaries
+
+|CEO Hari Dinesh
+|É o principal Product Owner. Seu objetivo é assegurar que todas as mudanças podem ser feitas de forma que consiga
+manter a qualidade do aplicativo/sistema web para os usuários finais.
+
+|Developers
+|Desenvolvedores que querem informações como persistir e recuperar dados do banco de dados Datomic. Informações sobre os
+principais design patterns que serão utilizados na arquitetura de microserviços.
+
+|Analistas de configuração e de infraestrutura
+|Necessitam saber como os sistemas serão implantados e configurados.
+|===
+****
